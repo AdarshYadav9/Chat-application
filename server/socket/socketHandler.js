@@ -1,4 +1,4 @@
-const Message = require('../models/Message');
+import Message from '../models/Message.js';
 
 let onlineUsers = new Map(); // socket.id => username
 
@@ -90,4 +90,4 @@ const socketHandler = (io) => {
   });
 };
 
-module.exports = socketHandler;
+export default socketHandler;

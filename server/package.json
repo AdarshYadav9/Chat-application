@@ -1,6 +1,7 @@
 {
   "name": "chat-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend for real-time chat application",
   "main": "server.js",
   "scripts": {

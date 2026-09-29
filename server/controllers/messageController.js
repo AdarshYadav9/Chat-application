@@ -1,6 +1,6 @@
-const Message = require('../models/Message');
+import Message from '../models/Message.js';
 
-const sendMessage = async (req, res) => {
+export const sendMessage = async (req, res) => {
   try {
     const { username, text } = req.body;
 
@@ -39,7 +39,7 @@ const sendMessage = async (req, res) => {
   }
 };
 
-const getMessages = async (req, res) => {
+export const getMessages = async (req, res) => {
   try {
     const messages = await Message.find().sort({ timestamp: 1 }).limit(100);
 
@@ -54,9 +54,4 @@ const getMessages = async (req, res) => {
       message: 'Failed to fetch messages',
     });
   }
-};
-
-module.exports = {
-  sendMessage,
-  getMessages,
 };

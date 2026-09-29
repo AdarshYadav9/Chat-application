@@ -1,12 +1,12 @@
-const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
-const cors = require('cors');
-const dotenv = require('dotenv');
+import express from 'express';
+import http from 'http';
+import { Server } from 'socket.io';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
-const connectDB = require('./config/db');
-const messageRoutes = require('./routes/messageRoutes');
-const socketHandler = require('./socket/socketHandler');
+import connectDB from './config/db.js';
+import messageRoutes from './routes/messageRoutes.js';
+import socketHandler from './socket/socketHandler.js';
 
 // Load env vars
 dotenv.config();
